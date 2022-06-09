@@ -1,0 +1,33 @@
+
+$blueColor: #63A1E5;
+$maxWidth: 1100px;
+$errorColor: #F41111;
+$successColor: #1DE73E;
+
+%content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%absolute {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+%show {
+    pointer-events: auto;
+    visibility: visible;
+    opacity: 1;
+}
+
+%hide {
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+

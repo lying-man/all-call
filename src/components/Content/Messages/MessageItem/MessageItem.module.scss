@@ -1,0 +1,112 @@
+
+@import "../../../../Styles/Help";
+
+.wrapper {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: all .2s ease-out;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .delete {
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        right: -18px;
+        top: -18px;
+        @extend %content;
+        border-radius: 50%;
+        border: 3px solid $errorColor;
+        cursor: pointer;
+        background-color: #fff;
+        transform: scale(0);
+        transition: background-color .1s ease-out, transform .2s ease-out;
+
+        @media (max-width: 768px) {
+            right: -6px;
+            top: -6px;
+            background-color: $errorColor;
+            transform: scale(1);
+        }
+
+        .line {
+            position: absolute;
+            display: block;
+            width: 60%;
+            height: 3px;
+            background-color: $errorColor;
+            transition: all .1s ease-out;
+
+            @media (max-width: 768px) {
+                background-color: #fff;
+            }
+
+            &:first-child { transform: rotate(45deg) }
+            &:last-child { transform: rotate(-45deg) }
+
+        }
+
+        &:hover {
+            background-color: $errorColor;
+            transition: all .1s ease-out;
+
+            .line {
+                background-color: #fff;
+                transition: all .1s ease-out;
+            }
+        }
+
+    }
+
+    &:hover {
+        box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.15);
+        transition: all .2s ease-out;
+
+        .delete {
+            transform: scale(1);
+            transition: all .2s ease-out;
+        }
+    }
+
+    .item {
+        width: 100%;
+        background-color: #fff;
+        border-radius: 6px;
+        border: none;
+        display: block;
+        padding: 20px;
+        cursor: pointer;
+        color: #000;
+        text-decoration: none;
+    
+        .info {
+            width: 100%;
+            @extend %content;
+            justify-content: space-between;
+            margin-bottom: 10px;
+    
+            .name {
+                font-size: 20px;
+            }
+    
+            .date {
+                font-size: 15px;
+            }
+        }
+    
+        .content {
+            font-size: 18px;
+            display: block;
+            text-align: left;
+        }
+    }
+
+}
+
+
+

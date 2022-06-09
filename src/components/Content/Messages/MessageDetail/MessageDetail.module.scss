@@ -1,0 +1,70 @@
+
+@import "../../../../Styles/Help";
+
+.wrapper {
+    padding-top: 40px;
+
+    .back {
+        width: 100%;
+        margin-bottom: 14px;
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            background-color: $blueColor;
+            color: #fff;
+            outline: none;
+            transition: all .1s ease-out;
+
+            &:hover {
+                background-color: darken($blueColor, 10);
+                transition: all .1s ease-out;
+            }
+        }
+    }
+
+    .panel {
+        width: 100%;
+        @extend %content;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .box {
+            @extend %content;
+            align-items: flex-end;
+
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+
+            .label {
+                margin-right: 5px;
+                font-size: 14px;
+            }
+
+            .value {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .content {
+        width: 100%;
+
+        .text {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .message {
+            font-size: 18px;
+            word-break: break-all;
+        }
+    }
+}
+
+
+

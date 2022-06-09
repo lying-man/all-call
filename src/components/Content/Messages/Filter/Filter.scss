@@ -1,0 +1,102 @@
+
+@import "../../../../Styles/Help";
+
+.react-select-container {
+    min-width: 100%;
+    font-size: 14px;
+    color: #000;
+  
+    .react-select__control {
+      cursor: pointer;
+  
+      .react-select__value-container {
+        border: none;
+        .react-select__single-value {
+          color: #000;
+        }
+      }
+  
+      .react-select__indicators {
+        border: none;
+        border-width: 0px;
+        box-shadow: none;
+  
+        svg {
+            fill: lighten(#000, 70);
+            animation: rotateArrowDown 0.2s ease-out forwards;
+        }
+  
+      }
+  
+      &--menu-is-open {
+  
+        .react-select__indicators {
+            svg {
+                animation: rotateArrowUp 0.2s ease-out forwards;
+            }
+          }
+        }
+  
+      }
+  
+      .react-select__indicator-separator {
+        display: none;
+      }
+
+    }
+  
+    .react-select__menu {
+  
+      .react-select__option {
+        cursor: pointer;
+      }
+    }
+  
+  .menu--select {
+    animation: showMenu 0.3s ease-out forwards;
+    &.hide--menu {
+      animation: hideMenu .2s ease-out forwards;
+    }
+  }
+  
+  @keyframes rotateArrowUp {
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(-180deg);
+    }
+  }
+  
+  @keyframes rotateArrowDown {
+    0%{
+      transform: rotate(-180deg);
+    }
+    100%{
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes showMenu {
+    0%{
+      transform: translateY(10%);
+      opacity: 0;
+    }
+    100%{
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes hideMenu {
+    0%{
+      transform: translateY(0%);
+      opacity: 1;
+    }
+    100%{
+      transform: translateY(10%);
+      opacity: 0;
+    }
+  }
+
+

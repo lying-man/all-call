@@ -1,0 +1,125 @@
+
+@import "../../../Styles/Help";
+
+.wrapper {
+    background-color: #000;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    max-width: 400px;
+    z-index: 10;
+    width: 100%;
+    border-radius: 10px 0px 0px 10px;
+    transition: all .2s ease-out;
+    transform: translateX(100%);
+
+    &.active {
+        transition: all .2s ease-out;
+        transform: translateX(0%);
+    }
+
+    .header {
+        @extend %content;
+        justify-content: space-between;
+        color: #fff;
+        padding: 20px;
+
+        .title {
+            user-select: none;
+            font-size: 20px;
+        }
+
+        .close {
+            width: 35px;
+            height: 35px;
+            @extend %content;
+            border: none;
+            outline: none;
+            background-color: #000;
+            cursor: pointer;
+            position: relative;
+            border-radius: 50%;
+            border: 3px solid #000;
+            transition: all .2s ease-out;
+
+            .line {
+                background-color: #fff;
+                width: 70%;
+                height: 3px;
+                display: block;
+                position: absolute;
+                transition: all .2s ease-out;
+
+                &:first-child {
+                    transform: rotate(45deg);
+                }
+
+                &:last-child {
+                    transform: rotate(-45deg);
+                }
+
+            }
+
+            &:hover {
+                border-color: $errorColor;
+                transition: all .2s ease-out;
+
+                .line {
+                    background-color: $errorColor;
+                    transition: all .2s ease-out;
+                }
+            }
+        }
+    }
+
+    .name {
+        user-select: none;
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 30px;
+        padding: 0px 20px;
+    }
+
+    .links {
+        width: 100%;
+
+        .link {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            font-size: 18px;
+            padding: 10px 20px;
+            position: relative;
+            overflow: hidden;
+
+            &.active {
+                color: $blueColor;
+            }
+
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 0%;
+                height: 100%;
+                background-color: $blueColor;
+                pointer-events: none;
+            }
+
+            &:hover {
+                background-color: lighten($blueColor, 20);
+                color: #000;
+            }
+
+            &:hover:after {
+                width: 2%;
+            }
+
+        }
+    }
+}
+

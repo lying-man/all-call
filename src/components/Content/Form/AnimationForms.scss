@@ -1,0 +1,50 @@
+
+//auth
+
+.form-block-appear {
+    opacity: 0;
+    transform: translateX(-60%);
+}
+
+.form-block-appear-active {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: all .3s ease-out;
+}
+
+.form-block-appear-done {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+
+
+.form-block-enter {
+    opacity: 0;
+    transform: translateX(-60%);
+}
+
+.form-block-enter-active {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: all .3s ease-out;
+}
+
+.form-block-enter-done {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+
+
+.form-block-exit {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.form-block-exit-active {
+    opacity: 0;
+    transform: translateX(60%);
+    transition: all .3s ease-out;
+}
+

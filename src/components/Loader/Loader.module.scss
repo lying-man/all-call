@@ -1,0 +1,41 @@
+
+@import "../../Styles/Help";
+
+.loader {
+    @extend %absolute;
+    position: absolute;
+    background-color: #fff;
+    display: none;
+    @extend %content;
+    z-index: 3;
+    left: -20px;
+    top: -20px;
+    width: 110%;
+    height: 110%;
+    
+    .loaderItem {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 3px solid $blueColor;
+        border-left: 3px solid transparent;
+    }
+
+    &.active {
+        display: flex;
+
+        .loaderItem { animation: load 1s linear infinite }
+    }
+
+    @keyframes load {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+}
+

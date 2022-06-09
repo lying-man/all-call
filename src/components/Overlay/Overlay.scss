@@ -1,0 +1,57 @@
+
+@import "../../Styles/Help";
+
+.overlay {
+    @extend %absolute;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: default;
+    z-index: 5;
+}
+
+
+
+.overlay-animate-exit {
+    opacity: 1;
+}
+
+.overlay-animate-exit-active {
+    opacity: 0;
+    transition: all .2s ease-out;
+}
+
+
+
+
+.overlay-animate-enter {
+    opacity: 0;
+}
+
+.overlay-animate-enter-active {
+    opacity: 1;
+    transition: all .2s ease-out;
+}
+
+.overlay-animate-enter-done {
+    opacity: 1;
+}
+
+
+
+
+.overlay-animate-appear {
+    opacity: 0;
+}
+
+.overlay-animate-appear-active {
+    opacity: 1;
+    transition: all .2s ease-out;
+}
+
+.overlay-animate-appear-done {
+    opacity: 1;
+}
+
+
+
+

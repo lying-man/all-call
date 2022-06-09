@@ -1,0 +1,10 @@
+
+@import "../../Styles/Help";
+
+.wrapper {
+    width: 100%;
+    max-width: $maxWidth;
+    margin: 0 auto;
+    min-height: calc(100vh - 80px);
+}
+

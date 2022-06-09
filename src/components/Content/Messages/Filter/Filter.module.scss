@@ -1,0 +1,16 @@
+
+@import "../../../../Styles/Help";
+
+.wrapper {
+    width: 100%;
+    @extend %content;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+
+    .select {
+        flex: 0 0 280px;
+    }
+}
+
+
+
