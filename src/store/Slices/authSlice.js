@@ -72,7 +72,8 @@ const loginUser = (name, pass, navigate) => {
                 method: "POST",
                 body: JSON.stringify({ name, pass }),
                 headers: {
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
+                    "Access-Control-Allow-Origin": "no-cors"
                 }
             });
             let data = await response.json();
@@ -111,7 +112,8 @@ const registerUser = (name, pass, navigate) => {
                 method: "POST",
                 body: JSON.stringify({ name, pass }),
                 headers: {
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
+                    "Access-Control-Allow-Origin": "no-cors"
                 }
             });
             let data = await response.json();

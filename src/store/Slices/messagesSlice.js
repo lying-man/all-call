@@ -35,7 +35,13 @@ const getMessages = (name, mode) => {
         dispatch(setIsLoading({ mode: true }));
 
         try {
-            const data = await fetch(`https://nodejs-call-ayah004l1-lying-man.vercel.app/user/messages?name=${name}&mode=${mode}`);
+            const data = await fetch(`https://nodejs-call-ayah004l1-lying-man.vercel.app/user/messages?name=${name}&mode=${mode}`,
+                {
+                    headers: {
+                        "Access-Control-Allow-Origin": "no-cors"
+                    }
+                }
+            );
             const messages = await data.json();
             dispatch(setMessages({messages}));
         } catch (e) {
@@ -56,7 +62,8 @@ const deleteMessage = (id) => {
                 method: "DELETE",
                 body: JSON.stringify({ id }),
                 headers: {
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
+                    "Access-Control-Allow-Origin": "no-cors"
                 }
             });
             

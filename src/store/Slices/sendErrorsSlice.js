@@ -36,7 +36,8 @@ const sendMessage = (name, sender, text) => {
                 method: "POST",
                 body: JSON.stringify({ name, sender, text }),
                 headers: {
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
+                    "Access-Control-Allow-Origin": "no-cors"
                 }
             });
             const data = await response.json();
