@@ -35,7 +35,7 @@ const getMessages = (name, mode) => {
         dispatch(setIsLoading({ mode: true }));
 
         try {
-            const data = await fetch(`http://call-app.openode.dev/user/messages?name=${name}&mode=${mode}`,
+            const data = await fetch(`https://call-app.openode.dev/user/messages?name=${name}&mode=${mode}`,
                 {
                     headers: {
                         "Access-Control-Allow-Origin": "no-cors"
@@ -58,7 +58,7 @@ const deleteMessage = (id) => {
 
         try {
 
-            const response = await fetch("http://call-app.openode.dev/message/delete", {
+            const response = await fetch("https://call-app.openode.dev/message/delete", {
                 method: "DELETE",
                 body: JSON.stringify({ id }),
                 headers: {

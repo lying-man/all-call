@@ -32,7 +32,7 @@ const sendMessage = (name, sender, text) => {
         dispatch(setIsLoading({ mode: true }));
 
         try {
-            const response = await fetch("http://call-app.openode.dev/user/send", {
+            const response = await fetch("https://call-app.openode.dev/user/send", {
                 method: "POST",
                 body: JSON.stringify({ name, sender, text }),
                 headers: {
