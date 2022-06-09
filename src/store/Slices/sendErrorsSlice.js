@@ -32,7 +32,7 @@ const sendMessage = (name, sender, text) => {
         dispatch(setIsLoading({ mode: true }));
 
         try {
-            const response = await fetch("http://localhost:4000/user/send", {
+            const response = await fetch("https://nodejs-call-ayah004l1-lying-man.vercel.app/user/send", {
                 method: "POST",
                 body: JSON.stringify({ name, sender, text }),
                 headers: {

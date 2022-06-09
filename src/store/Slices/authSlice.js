@@ -68,7 +68,7 @@ const loginUser = (name, pass, navigate) => {
 
         try {
 
-            let response = await fetch("http://localhost:4000/auth/login", {
+            let response = await fetch("https://nodejs-call-ayah004l1-lying-man.vercel.app/auth/login", {
                 method: "POST",
                 body: JSON.stringify({ name, pass }),
                 headers: {
@@ -107,7 +107,7 @@ const registerUser = (name, pass, navigate) => {
         dispatch(setIsAuthentification({mode: true}));
 
         try {
-            let response = await fetch("http://localhost:4000/auth/register", {
+            let response = await fetch("https://nodejs-call-ayah004l1-lying-man.vercel.app/auth/register", {
                 method: "POST",
                 body: JSON.stringify({ name, pass }),
                 headers: {

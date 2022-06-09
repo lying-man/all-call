@@ -35,7 +35,7 @@ const getMessages = (name, mode) => {
         dispatch(setIsLoading({ mode: true }));
 
         try {
-            const data = await fetch(`http://localhost:4000/user/messages?name=${name}&mode=${mode}`);
+            const data = await fetch(`https://nodejs-call-ayah004l1-lying-man.vercel.app/user/messages?name=${name}&mode=${mode}`);
             const messages = await data.json();
             dispatch(setMessages({messages}));
         } catch (e) {
@@ -52,7 +52,7 @@ const deleteMessage = (id) => {
 
         try {
 
-            const response = await fetch("http://localhost:4000/message/delete", {
+            const response = await fetch("https://nodejs-call-ayah004l1-lying-man.vercel.app/message/delete", {
                 method: "DELETE",
                 body: JSON.stringify({ id }),
                 headers: {
