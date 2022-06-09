@@ -32,7 +32,7 @@ const sendMessage = (name, sender, text) => {
         dispatch(setIsLoading({ mode: true }));
 
         try {
-            const response = await fetch("https://nodejs-call-ayah004l1-lying-man.vercel.app/user/send", {
+            const response = await fetch("http://call-app.openode.dev/user/send", {
                 method: "POST",
                 body: JSON.stringify({ name, sender, text }),
                 headers: {
