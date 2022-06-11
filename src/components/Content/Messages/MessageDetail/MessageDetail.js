@@ -26,7 +26,7 @@ export default function MessageDetail() {
                 </div>
                 <div className={cl.box}>
                     <div className={cl.label}>Дата отправления:</div>
-                    <div className={cl.value}>{ `${formatTimeShort(date)}, ${date.split(",")[1].split(".").join(":")}` }</div>
+                    <div className={cl.value}>{formatTimeShort(date)}</div>
                 </div>
             </div>
             <div className={cl.content}>

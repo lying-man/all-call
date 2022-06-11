@@ -16,6 +16,8 @@ const months = [
 
 function formatTimeShort(time) {
 
+    time = new Date(time).toLocaleString();
+
     time = time.split(",")[0];
 
     let parts = time.split(".");
